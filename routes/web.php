@@ -14,8 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", 'PrincipalController@principal');
-
 Route::get('/contato', 'ContatoController@contato');
-
 Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+
+/* Login */
+Route::get('/login', '');
+
+/* App */
+Route::prefix('/app')->group( function(){
+  Route::get('/clientes', '');
+  Route::get('/fornecedores', '');
+  Route::get('/produtos', '');
+});
 
